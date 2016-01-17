@@ -120,4 +120,7 @@ public class Vector {
     public int check(){
         return 1;
     }
+    public int checking(){
+        return 2;
+    }
 }
