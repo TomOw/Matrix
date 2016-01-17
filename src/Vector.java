@@ -126,7 +126,12 @@ public class Vector {
     public int checking3(){
         return 3;
     }
-    public int checking4(){
+    public int checking4() {
         return 4;
+    }
+
+
+    public int test(){
+        return 123;
     }
 }
