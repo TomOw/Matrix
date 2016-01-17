@@ -134,4 +134,7 @@ public class Vector {
     public int test(){
         return 123;
     }
+    public int test2(){
+        return 123;
+    }
 }
