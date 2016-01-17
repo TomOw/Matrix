@@ -117,24 +117,4 @@ public class Vector {
 
     public ArrayList<Integer> getAvIndexes() { return this.avIndexes;}
 
-    public int check(){
-        return 1;
-    }
-    public int checking(){
-        return 2;
-    }
-    public int checking3(){
-        return 3;
-    }
-    public int checking4() {
-        return 4;
-    }
-
-
-    public int test(){
-        return 123;
-    }
-    public int test2(){
-        return 123;
-    }
 }
