@@ -116,4 +116,8 @@ public class Vector {
     }
 
     public ArrayList<Integer> getAvIndexes() { return this.avIndexes;}
+
+    public int check(){
+        return 1;
+    }
 }
