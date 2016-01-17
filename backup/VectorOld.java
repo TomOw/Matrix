@@ -1,29 +1,24 @@
-import java.io.PrintWriter;
-import java.util.ArrayList;
-
 /**
  *
  * @author Tomasz
  */
-public class Vector {
+public class VectorOld {
     private Node root;
-    private ArrayList<Integer> avIndexes;
+    int length;
 
-    public Vector(int l) {
+    public VectorOld(int l) {
         this.root = null;
-        this.avIndexes = new ArrayList<>();
+        this.length = l;
     }
 
-    public Vector() {
+    public VectorOld(){
         this.root = null;
-        this.avIndexes = new ArrayList<>();
     }
 
     public void insert(double data, int ind){
         Node n = new Node (data, ind);
         if(root == null){
             root = n;
-            this.avIndexes.add(ind);
         }else
             recursiveInsert(data, ind, root);
     }
@@ -40,16 +35,12 @@ public class Vector {
             //System.out.println("indesx mniejszy od root");
         } else if (n.getIndex() > n2.getIndex() && n2.getRight() == null) {
             n2.setRight(n);
-            this.avIndexes.add(n.getIndex());
             i++;
             //System.out.println("wstawianie na prawo");
         } else if (n.getIndex() < n2.getIndex() && n2.getLeft() == null) {
             n2.setLeft(n);
-            this.avIndexes.add(n.getIndex());
             i++;
             //System.out.println("wstawianie na lewo");
-        } else if (n.getIndex() == n2.getIndex()){
-            n2.setData(data);
         }
     }
 
@@ -105,28 +96,5 @@ public class Vector {
 
     public void print(){
         this.root.printFormatted(0);
-    }
-
-    public void printToFile(PrintWriter out){
-        this.root.printFormattedToFile(0, out);
-    }
-
-    public int getNumberOfAvIndexes(){
-        return this.avIndexes.size();
-    }
-
-    public ArrayList<Integer> getAvIndexes() { return this.avIndexes;}
-
-    public int check(){
-        return 1;
-    }
-    public int checking(){
-        return 2;
-    }
-    public int checking3(){
-        return 3;
-    }
-    public int checking4(){
-        return 4;
     }
 }
